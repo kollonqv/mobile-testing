@@ -22,6 +22,9 @@ https://developer.android.com/studio
 ### Setup Android Emulator (Pixel 6)
 After installing Android studio and going through the initial setup in the wizard, next we need to setup the Android emulator. Follow the steps below to setup the Android emulator to run our application and tests on.
 
+If on windows, make sure you have Windows Hypervisor Platform enabled from _Turn Windows features on or off_
+![image](https://user-images.githubusercontent.com/23452449/234464529-15ce155b-1a2b-4745-b164-4774ab7ea862.png)
+
 Select _Virtual Device Manager_ from the _More Actions_ drop down list
 ![image](https://user-images.githubusercontent.com/23452449/234455164-6be3be16-e4d3-4b9f-849a-d5b2d80db195.png)
 
