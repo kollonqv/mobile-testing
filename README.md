@@ -1,8 +1,5 @@
 # mobile-testing
 
-npm run test -- --spec=./test/specs/4_PRODUCT_onesie.spec.js
-
-
 # Tools and Dependencies
 
 ## Github Desktop or Git command line tools
@@ -43,11 +40,37 @@ Click _Finish_
 Click on the _play_ button to start the emulator
 ![image](https://user-images.githubusercontent.com/23452449/234459487-72fc7605-9312-4005-843f-f9b7d814cb02.png)
 
+Once you see the emulated device running, drag and drop the .apk file from ./app/android/ folder to the device to install it to the image
+
+- find the location of the installed Android SDK with Android Studio's SDK Manager:
+![image](https://user-images.githubusercontent.com/23452449/235389459-ae862ff0-c10e-4637-abd2-764cc1d4de49.png)
+![image](https://user-images.githubusercontent.com/23452449/235389506-d434aa05-c7fc-4b21-a4c4-bfd40d9b55d1.png)
+- copy the path to the sdk and create a new environment variable called ANDROID_HOME and set the value of that variable to the path:
+![image](https://user-images.githubusercontent.com/23452449/235389588-da7dad29-150e-4386-96f1-fdb2736e7904.png)
+
 ## OpenJDK
 https://jdk.java.net/20/
+- extract contents to somewhere in your filesystem and copy the path
+- Create a new environment variable called JAVA_HOME and set the value to the path to the folder containing jdk bin:
+![image](https://user-images.githubusercontent.com/23452449/235389367-9c5dd9b9-fbad-4654-8f9b-0e8c687f31f1.png)
 
 ## Appium Server
 ```npm i -g appium@next```
 
 ## Appium Inspector
 https://github.com/appium/appium-inspector/releases/tag/v2023.4.3
+
+## npm packages
+When all the above steps have been completed, you can finally run
+```npm install```
+within the project root to install the remaining dependencies
+
+# Running tests locally
+If you did not close the terminal session after setting the envrionment variables during installation, do it now before trying to run the tests as environment variables are loaded into the terminal session only when the session is started.
+
+After installing all the above tools and depndenceis, you are ready to run a test. 
+1. Open Android Studio Virtual Device Manager and press the play button
+2. Start the Appium server. To start the server, run
+```appium```
+in your terminal
+3. Open another terminal window and run ```npm run test -- --spec=./test/specs/1_LOGIN_valid_user.spec.js``` to run the first test
