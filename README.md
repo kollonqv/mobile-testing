@@ -43,4 +43,8 @@ Click _Finish_
 Click on the _play_ button to start the emulator
 ![image](https://user-images.githubusercontent.com/23452449/234459487-72fc7605-9312-4005-843f-f9b7d814cb02.png)
 
+## Appium Server
+```npm i -g appium@next```
 
+## Appium Inspector
+https://github.com/appium/appium-inspector/releases/tag/v2023.4.3
