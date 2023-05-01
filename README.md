@@ -43,15 +43,18 @@ Click on the _play_ button to start the emulator
 Once you see the emulated device running, drag and drop the .apk file from ./app/android/ folder to the device to install it to the image
 
 - find the location of the installed Android SDK with Android Studio's SDK Manager:
+
 ![image](https://user-images.githubusercontent.com/23452449/235389459-ae862ff0-c10e-4637-abd2-764cc1d4de49.png)
 ![image](https://user-images.githubusercontent.com/23452449/235389506-d434aa05-c7fc-4b21-a4c4-bfd40d9b55d1.png)
 - copy the path to the sdk and create a new environment variable called ANDROID_HOME and set the value of that variable to the path:
+
 ![image](https://user-images.githubusercontent.com/23452449/235389588-da7dad29-150e-4386-96f1-fdb2736e7904.png)
 
 ## OpenJDK
 https://jdk.java.net/20/
 - extract contents to somewhere in your filesystem and copy the path
 - Create a new environment variable called JAVA_HOME and set the value to the path to the folder containing jdk bin:
+
 ![image](https://user-images.githubusercontent.com/23452449/235389367-9c5dd9b9-fbad-4654-8f9b-0e8c687f31f1.png)
 
 ## Appium Server
