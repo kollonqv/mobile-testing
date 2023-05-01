@@ -43,6 +43,9 @@ Click _Finish_
 Click on the _play_ button to start the emulator
 ![image](https://user-images.githubusercontent.com/23452449/234459487-72fc7605-9312-4005-843f-f9b7d814cb02.png)
 
+## OpenJDK
+https://jdk.java.net/20/
+
 ## Appium Server
 ```npm i -g appium@next```
 
