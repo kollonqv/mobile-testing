@@ -28,7 +28,8 @@ After installing Visual Studio Code, open the cloned repository folder:
 
 It's highly recommended to run commands within the Visual Studio Code Terminal. Open and hide it by pressing _CTRL + J_ or by clicking the Toggle Panel button at the top right:
 
-![image](https://user-images.githubusercontent.com/23452449/235809500-7986b3ee-84b8-4b35-9d58-73bc13f6eaf3.png)
+![image](https://user-images.githubusercontent.com/23452449/235809671-3e3eceb1-7506-4a85-9552-9cf255470779.png)
+
 
 ## Node and Npm
 The project uses NPM to manage dependencies. please download the latest LTS Version: 18.16.0 (includes npm 9.5.1) and install it:
