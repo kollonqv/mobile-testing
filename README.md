@@ -3,17 +3,34 @@
 # Tools and Dependencies
 
 ## Github Desktop or Git command line tools
-Git commandline tools: 
-https://git-scm.com/downloads
 
-GitHub Desktop if you prefer to use Git through a UI:
+Git is the the version control tool which will be used in the project. 
+
+Download GitHub Deskto to use Git through a UI:
 https://desktop.github.com/
 
-## Node and Npm 
-Latest LTS Version: 18.16.0 (includes npm 9.5.1):
+or Git commandline tools if you prefer to use commandline: 
+https://git-scm.com/downloads
+
+After installing Git, clone the repository into your local machine. Please use a location that is not synced up with Onedrive.
+Here's how to clone a repository with GitHub Desktop: https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop
+
+## Node and Npm
+The project uses NPM to manage dependencies. please download the latest LTS Version: 18.16.0 (includes npm 9.5.1) and install it:
 https://nodejs.org/en/download
 
+## OpenJDK
+
+Open JDK is needed for running tests in the emulator.
+Download the JDK from:
+https://jdk.java.net/20/
+- extract contents of the .zip file to somewhere in your filesystem and copy the path
+- Create a new environment variable called JAVA_HOME and set the value to the path to the folder containing jdk bin:
+
+![image](https://user-images.githubusercontent.com/23452449/235389367-9c5dd9b9-fbad-4654-8f9b-0e8c687f31f1.png)
+
 ## Android Studio
+We will use Android Studio to run run the emulator locally. Download it from:
 https://developer.android.com/studio
 
 ### Setup Android Emulator (Pixel 6)
@@ -50,23 +67,20 @@ Once you see the emulated device running, drag and drop the .apk file from ./app
 
 ![image](https://user-images.githubusercontent.com/23452449/235389588-da7dad29-150e-4386-96f1-fdb2736e7904.png)
 
-## OpenJDK
-https://jdk.java.net/20/
-- extract contents to somewhere in your filesystem and copy the path
-- Create a new environment variable called JAVA_HOME and set the value to the path to the folder containing jdk bin:
-
-![image](https://user-images.githubusercontent.com/23452449/235389367-9c5dd9b9-fbad-4654-8f9b-0e8c687f31f1.png)
-
 ## Appium Server
+Our test framework uses Appium to communicate with the emulator.
+Install appium server by running the following command in the commandline/powershell
 ```npm i -g appium@next```
 
 ## Appium Inspector
+We will use Appium Inspector to inspect elements and find locators.
+Download and Appium Inspector .exe from:
 https://github.com/appium/appium-inspector/releases/tag/v2023.4.3
 
 ## npm packages
-When all the above steps have been completed, you can finally run
+When all the above steps have been completed, open the cloned repository root folder in the commandline/powershell and run
 ```npm install```
-within the project root to install the remaining dependencies
+to install the remaining dependencies
 
 # Running tests locally
 If you did not close the terminal session after setting the envrionment variables during installation, do it now before trying to run the tests as environment variables are loaded into the terminal session only when the session is started.
