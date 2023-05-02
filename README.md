@@ -14,13 +14,27 @@ https://git-scm.com/downloads
 
 After installing Git, clone the repository into your local machine. Please use a location that is not synced up with Onedrive.
 Here's how to clone a repository with GitHub Desktop: https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop
+More on GitHub Desktop: https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
+
+## Visual Studio Code
+It's highly recommended to use Visual Studio Code as the code editor. Download and install it from:
+https://code.visualstudio.com/
+
+After installing Visual Studio Code, open the cloned repository folder:
+
+![image](https://user-images.githubusercontent.com/23452449/235809073-50a41a52-e334-4e41-bc5f-61095b0afff6.png)
+
+![image](https://user-images.githubusercontent.com/23452449/235809207-b5c53131-beb0-4086-8d05-5a1635dfa26d.png)
+
+It's highly recommended to run commands within the Visual Studio Code Terminal. Open and hide it by pressing _CTRL + J_ or by clicking the Toggle Panel button at the top right:
+
+![image](https://user-images.githubusercontent.com/23452449/235809500-7986b3ee-84b8-4b35-9d58-73bc13f6eaf3.png)
 
 ## Node and Npm
 The project uses NPM to manage dependencies. please download the latest LTS Version: 18.16.0 (includes npm 9.5.1) and install it:
 https://nodejs.org/en/download
 
 ## OpenJDK
-
 Open JDK is needed for running tests in the emulator.
 Download the JDK from:
 https://jdk.java.net/20/
