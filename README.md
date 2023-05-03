@@ -105,4 +105,9 @@ After installing all the above tools and depndenceis, you are ready to run a tes
 2. Start the Appium server. To start the server, run
 ```appium```
 in your terminal
-3. Open another terminal window and run ```npm run test -- --spec=./test/specs/1_LOGIN_valid_user.spec.js``` to run the first test
+3. Open another terminal window, you can split the terminal or click the + sign to open another one:
+
+![image](https://user-images.githubusercontent.com/23452449/235810427-15992411-d86a-4d0f-8036-695186ee666d.png)
+![image](https://user-images.githubusercontent.com/23452449/235810290-8dd0b96f-ce39-4fb5-8563-477ec9677da7.png)
+
+5. run ```npm run test -- --spec=./test/specs/1_LOGIN_valid_user.spec.js``` in the terminal window that is not running Appium to run the first test
