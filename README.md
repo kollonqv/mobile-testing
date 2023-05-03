@@ -6,7 +6,7 @@
 
 Git is the the version control tool which will be used in the project. 
 
-Download GitHub Deskto to use Git through a UI:
+Download GitHub Desktop to use Git through a UI:
 https://desktop.github.com/
 
 or Git commandline tools if you prefer to use commandline: 
