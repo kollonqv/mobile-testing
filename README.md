@@ -111,3 +111,13 @@ in your terminal
 ![image](https://user-images.githubusercontent.com/23452449/235810290-8dd0b96f-ce39-4fb5-8563-477ec9677da7.png)
 
 5. run ```npm run test -- --spec=./test/specs/1_LOGIN_valid_user.spec.js``` in the terminal window that is not running Appium to run the first test
+
+# Troubleshooting Appium Installation
+Appium Doctor is a utility to diagnose any issues with appium or test environment variables.
+
+Install appium-doctor via npm:
+1. In command prompt, enter ```npm install appium-doctor -g```.
+2. Wait for the installation to be complete via command prompt window.
+3. Run the appium doctor diagnostics by entering the following in command prompt: ```appium-doctor --android```.
+4. Review and verify the green checkmark is shown for Node.js, Node, ANDROID_HOME, JAVA_HOME, bin values/versions/environment paths are set correctly.
+5. Fix any of the installations or environment variables and run the diagnostics again: ```appium-doctor --android```.
