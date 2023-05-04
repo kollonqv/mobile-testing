@@ -23,7 +23,7 @@ config.capabilities = [
   {
     platformName: "Android",
     "appium:platformVersion": "13.0",
-    "appium:deviceName": "Nexus 5",
+    "appium:deviceName": "Pixel 6 API 33",
     "appium:automationName": "UIAutomator2",
     "appium:app": path.join(process.cwd(), "./app/android/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"),
     'appium:appWaitActivity': 'com.swaglabsmobileapp.*',
