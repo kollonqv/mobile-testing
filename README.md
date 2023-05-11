@@ -121,3 +121,7 @@ Install appium-doctor via npm:
 3. Run the appium doctor diagnostics by entering the following in command prompt: ```appium-doctor --android```.
 4. Review and verify the green checkmark is shown for Node.js, Node, ANDROID_HOME, JAVA_HOME, bin values/versions/environment paths are set correctly.
 5. Fix any of the installations or environment variables and run the diagnostics again: ```appium-doctor --android```.
+
+
+
+Featureabc-change+morestuff+even more stuff
