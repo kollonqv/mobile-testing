@@ -9,7 +9,11 @@ describe('2_LOGIN_invalid_user', () => {
     // 1. Insert 'invalid_username' to the Username field
     // 2. Insert 'invalid_password' to the Password field
     // 3. Press Login
-    // 4. Error message is shown: "Username and password do not match any user in this service"
+    // 4. Error message is shown: "Username and password do not match any user in this service."
+
+    await LoginScreen.usernameField.setValue("invalid_username");
+    await LoginScreen.passwordField.setValue("invalid_password");
+    await LoginScreen.loginButton.click();
+    await expect(LoginScreen.errorMessage).toHaveText('Username and password do not match any user in this service.');  
   });
-  
 });
