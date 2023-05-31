@@ -11,7 +11,7 @@ class LoginScreen {
   }
   get loginErrorMessage()
   {
-    return $('//*[@content-desc="test-Error message" or @name="test-Error message"]/android.widget.TextView')
+    return $('//*[@content-desc="test-Error message" or @name="test-Error message"]');
   }
 }
 

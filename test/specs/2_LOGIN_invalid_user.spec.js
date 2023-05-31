@@ -15,11 +15,10 @@ describe('2_LOGIN_invalid_user', () => {
     await LoginScreen.loginButton.click();
     var errorObject = LoginScreen.loginErrorMessage;
     //toverify error message display
-    await expect(errorObject).toBeDisplayed() 
+    await expect(errorObject).toBeDisplayed();
     //to verify the message
-    await expect(errorObject).toHaveText('Username and password do not match any user in this service.')
-     
-    
+    await expect(errorObject).toHaveText('Username and password do not match any user in this service.');
+        
   });
   
 });
