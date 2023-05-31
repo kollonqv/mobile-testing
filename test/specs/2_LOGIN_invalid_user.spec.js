@@ -11,12 +11,16 @@ describe('2_LOGIN_invalid_user', () => {
     // 3. Press Login
     // 4. Error message is shown: "Username and password do not match any user in this service"
 
-    const errorMessage = "Username and password do not match any user in this service";
+    const errorMessage = 'Username and password do not match any user in this service.';
     await LoginScreen.usernameField.setValue("invalid_username");
     await LoginScreen.passwordField.setValue("invalid_password");
     await LoginScreen.loginButton.click();
-    //await expect(LoginScreen.errorMessageField).toBeDisplayed();
-    //await LoginScreen.errorMessageField.getText()
+    
+    // Verify that the error message is displayed
+    await expect(LoginScreen.errorMessageField).toBeDisplayed();
+    //await LoginScreen.errorMessageField.getText();
+
+    // Verify that the error message showing is as expected
     await expect(LoginScreen.errorMessageField).toHaveText(errorMessage);
     //await new Promise(f => setTimeout(f, 2000));
 
