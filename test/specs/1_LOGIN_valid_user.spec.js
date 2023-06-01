@@ -1,6 +1,7 @@
 const LoginScreen = require("../screenobjects/login.screen");
 const ProductListScreen = require("../screenobjects/product-list.screen");
 const SidePanelScreen = require("../screenobjects/side-panel.screen");
+const Utils = require('../utils/utils');
 
 describe('Hackathon Scenario_1', () => {
 
@@ -12,11 +13,7 @@ describe('Hackathon Scenario_1', () => {
     // 2. Press Logout
     // 3. Validate that the home page with Username and Password fields opens
 
-    await LoginScreen.usernameField.setValue("standard_user");
-    await LoginScreen.passwordField.setValue("secret_sauce");
-    await LoginScreen.loginButton.click();
-    await expect(ProductListScreen.productList).toBeDisplayed();
-    await new Promise(f => setTimeout(f, 2000));
+    await Utils.signIn("standard_user", "secret_sauce", true);
 
     // CLEANUP
     // 1. Press the Hamburger button

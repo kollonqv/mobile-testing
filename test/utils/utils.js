@@ -1,3 +1,6 @@
+const LoginScreen = require("../screenobjects/login.screen");
+const ProductListScreen = require("../screenobjects/product-list.screen");
+
 class Utils {
     async swipeDown() {
         const size = await driver.getWindowRect();
@@ -31,8 +34,17 @@ class Utils {
           },
         ]);
     }
-  
-  
+
+
+    async signIn(username, password, signInWorked) {
+      await LoginScreen.usernameField.setValue(username);
+      await LoginScreen.passwordField.setValue(password);
+      await LoginScreen.loginButton.click();
+      if (signInWorked) {
+        await expect(ProductListScreen.productList).toBeDisplayed();
+        console.log('signed in!');
+      }
+    }
   }
   
   module.exports = new Utils();
