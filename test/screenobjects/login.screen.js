@@ -9,6 +9,10 @@ class LoginScreen {
   get loginButton() {
     return $('//*[@content-desc="test-LOGIN" or @name="test-LOGIN"]');
   }
+
+  get errorMessage() {
+    return $('//*[@content-desc="test-Error message"]');
+  }
 }
 
 module.exports = new LoginScreen();
