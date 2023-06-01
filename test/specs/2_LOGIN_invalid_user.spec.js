@@ -25,8 +25,6 @@ describe('2_LOGIN_invalid_user', () => {
     //await new Promise(f => setTimeout(f, 2000));
 
 
-    // CLEANUP
-
   });
   
 });
