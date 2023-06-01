@@ -1,3 +1,4 @@
+const loginScreen = require("../screenobjects/login.screen");
 const LoginScreen = require("../screenobjects/login.screen");
 
 describe('2_LOGIN_invalid_user', () => {
@@ -10,6 +11,12 @@ describe('2_LOGIN_invalid_user', () => {
     // 2. Insert 'invalid_password' to the Password field
     // 3. Press Login
     // 4. Error message is shown: "Username and password do not match any user in this service"
+    await LoginScreen.usernameField.setValue("invalid_username");
+    await LoginScreen.passwordField.setValue("invalid_password");
+    await LoginScreen.loginButton.click();
+    await expect (LoginScreen.errormessage).toBeDisplayed();
+    await expect(LoginScreen.errormessage).toHaveText('Username and password do not match any user in this service.');
+    await new Promise(f => setTimeout(f,3000));
   });
   
 });

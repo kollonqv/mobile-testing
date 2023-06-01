@@ -132,4 +132,4 @@ Install appium-doctor via npm:
   "appium:appPackage": "com.swaglabsmobileapp",
   "appium:appActivity": "com.swaglabsmobileapp.MainActivity"
 }
-```
+```C:\Users\susmita.kar\GitHub
