@@ -9,6 +9,10 @@ class LoginScreen {
   get loginButton() {
     return $('//*[@content-desc="test-LOGIN" or @name="test-LOGIN"]');
   }
+  get errorMsgField() {
+    //return $('//android.view.ViewGroup[@content-desc="test-Error message"]/android.widget.TextView');
+    return $('//*[@content-desc="test-Error message"]/*');
+  }
 }
 
 module.exports = new LoginScreen();
