@@ -27,7 +27,7 @@ describe('2_LOGIN_invalid_user', () => {
       
     let errorMsg = await loginScreen.errorMsgField.getText();
   // if(errorMsg.isEqual("Username and password do not match any user in this service"))
-  if(errorMsg= "Username and password do not match any user in this service")
+  if(errorMsg= "Username and password do not match any user in this service.")
       console.log(errorMsg+"- Invalid credentials error message is displayed successfully")
     else  
       console.log("Failed to display expected error message");
