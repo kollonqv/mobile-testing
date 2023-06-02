@@ -5,6 +5,9 @@ class ProductListScreen {
   get menuButton() {
     return $('//*[@content-desc="test-Menu" or @name="test-Menu"]');
   }
+  get tshirtRedItem() {
+    return $('(//*[@content-desc="test-Item title"])[2]');
+  }
 }
 
 module.exports = new ProductListScreen();

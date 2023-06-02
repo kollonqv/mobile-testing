@@ -35,6 +35,16 @@ class Utils {
         ]);
     }
 
+    async swipeLeft(ele){
+      console.log('performing swipe left!');
+      driver.swipeLeft(ele, 1);
+    }
+
+    async swipeRight(ele){
+      console.log('performing swipe right!');
+      driver.swipeRight(ele, 1);
+    }
+
 
     async signIn(username, password, signInWorked) {
       await LoginScreen.usernameField.setValue(username);
