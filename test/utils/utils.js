@@ -22,12 +22,12 @@ class Utils {
               // c. Finger comes down into contact with screen                        
               { type: 'pointerDown', button: 0 },
               // d. Pause for a little bit                        
-              { type: 'pause', duration: 100 },
+              { type: 'pause', duration: 150 },
               // e. Finger moves to end position                        
               //    We move our finger from the center of the element to the                        
               //    starting position of the element.                        
               //    Play with the duration to make the swipe go slower / faster                        
-              { type: 'pointerMove', duration: 1000, x: end_x, y: end_y },
+              { type: 'pointerMove', duration: 10000, x: end_x, y: end_y },
               // f. Finger gets up, off the screen                        
               { type: 'pointerUp', button: 0 },
             ],
@@ -35,11 +35,12 @@ class Utils {
         ]);
     }
 
-
+    // Sign in method. Takes username, password and a boolean flag to determine if login is succesfull
     async signIn(username, password, signInWorked) {
       await LoginScreen.usernameField.setValue(username);
       await LoginScreen.passwordField.setValue(password);
       await LoginScreen.loginButton.click();
+      // Check if the product list screen is displayed after valid credentials are used
       if (signInWorked) {
         await expect(ProductListScreen.productList).toBeDisplayed();
         console.log('signed in!');
