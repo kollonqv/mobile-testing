@@ -1,4 +1,4 @@
-class inventoryItemDetailsScreen {
+class InventoryItemScreen {
     get inventoryItem() {
         return $('//*[@content-desc="test-Inventory item page"]');
     }
@@ -12,6 +12,8 @@ class inventoryItemDetailsScreen {
         return $('//*[@content-desc="test-Cart"]');
     }
     get itemDescription(){
-        return $('//*[@content-desc="test-Description"]/android.widget.TextView[1]')
+        return $('//*[@content-desc="test-Description"]/android.widget.TextView[0]')
     }
 }
+
+module.exports = new InventoryItemScreen();
