@@ -13,9 +13,10 @@ describe('3_E2E_order', () => {
     await Utils.signIn("standard_user", "secret_sauce", true);
     // 2. Scroll to the Test.allTheThings() T-Shirt (Red)
     await Utils.swipeDown();
-    console.log("First swipe down..")
+    await Utils.swipeDown();
+    console.log("First swipe down..");
     // 3. Open the T-Shirt item page
-    await expect(ProductListScreen.tshirtRedItem).toBeDisplayed();
+    await expect(ProductListScreen.tshirtRedItem).toHaveText("Test.allTheThings() T-Shirt (Red)");
     console.log("tshirt item is displayed..");
     await ProductListScreen.tshirtRedItem.click();
     console.log("Clicked the tshirt item..");
@@ -37,8 +38,6 @@ describe('3_E2E_order', () => {
     await expect(InventoryItemScreen.itemDescription).toHaveText("Test.allTheThings() T-Shirt (Red)");
     console.log("Validate the item description..");
     // 7. Perform a swipe from left to right to navigate back to the product page
-    await Utils.swipeRight(InventoryItemScreen.inventoryItem);
-    
     // 8. Verify that product page was opened after the swipe
 
     // 9. Open Cart
