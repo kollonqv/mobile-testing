@@ -1,4 +1,6 @@
-const LoginScreen = require("../screenobjects/login.screen");
+const Utils = require("../utils/utils");
+const ProductList = require("../screenobjects/product-list.screen");
+const ProductDetailsScreen = require("../screenobjects/product-details.screen");
 
 describe('3_E2E_order', () => {
 
@@ -8,10 +10,20 @@ describe('3_E2E_order', () => {
     // 1. Login to the app with valid credentials
     await Utils.signIn("standard_user", "secret_sauce", true);
     // 2. Scroll to the Test.allTheThings() T-Shirt (Red)
+    
+    await Utils.scrollToElement(ProductList.productTestAllThingsTShirt);
     // 3. Open the T-Shirt item page
+    await ProductList.productTestAllThingsTShirt.click();
+    await Utils.verifyProductDetailsScreen();//Verifying the screen elements
+    // verifying product name text
+    await expect(ProductDetailsScreen.productName).toHaveText("Test.allTheThings() T-Shirt (Red)");
     // 4. Add the T-Shirt to the cart
+    // Scroll to Add to cart button
+    await Utils.scrollToElement(productDetailsScreen.AddToCartButton);
+    await ProductDetailsScreen.AddToCartButton.click();
 
     // 5. Open Cart
+
     // 6. Verify that the item is in the Cart
     // 7. Perform a swipe from left to right to navigate back to the product page
     // 8. Verify that product page was opened after the swipe

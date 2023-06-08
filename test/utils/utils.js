@@ -1,6 +1,6 @@
 const LoginScreen = require("../screenobjects/login.screen");
 const ProductListScreen = require("../screenobjects/product-list.screen");
-
+const ProductDetailsScreen = require("../screenobjects/product-details.screen");
 class Utils {
     async swipeDown() {
         const size = await driver.getWindowRect();
@@ -43,6 +43,44 @@ class Utils {
       if (signInWorked) {
         await expect(ProductListScreen.productList).toBeDisplayed();
         console.log('signed in!');
+      }
+    }
+    
+    async verifyProductDetailsScreen()
+    {
+      // verifying product image displays
+        await expect(ProductDetailsScreen.productImage).toBeDisplayed();
+        console.log('Product image display');
+        // Verifying product name displays
+        await expect(ProductDetailsScreen.productName).toBeDisplayed();
+        console.log('Product Name display');
+        // verifying product details displays
+        await expect(ProductDetailsScreen.productDetails).toBeDisplayed();
+        console.log('Product Details display');
+        // Verifying product price displays
+        await expect(ProductDetailsScreen.productPrice).toBeDisplayed();
+        console.log('Product Price display');
+        
+    }
+  
+    // Method is for scroll till the element to be displayed. Takes input as screen element and sroll max of 10 times
+    async scrollToElement(obj)
+    {
+      var i=0;
+      while(i<10)
+      {
+        try
+        {
+          console.log("finding object")
+          await expect(obj).toBeDisplayed();
+          break;
+        }
+        catch(exc)
+        {
+          console.log("object not found, scrolling more : i="+i);
+          i++;
+          this.swipeDown();
+        }
       }
     }
   }
