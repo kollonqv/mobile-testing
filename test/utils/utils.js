@@ -35,6 +35,18 @@ class Utils {
         ]);
     }
 
+    async swipeDownUntilElementIsVisible(elementLocator) {
+      var currentSwipes = 0;
+      while(! await (elementLocator).isExisting() && currentSwipes < 5){
+        console.log(`Element not visible, swiping down`);
+        await this.swipeDown();
+        currentSwipes++;
+      }
+    }
+
+    getElementWithText(text) {
+      return $(`//*[contains(@text,"${text}") or contains(@label,"${text}")]`);
+    }
 
     async signIn(username, password, signInWorked) {
       await LoginScreen.usernameField.setValue(username);
