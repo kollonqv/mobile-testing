@@ -57,6 +57,72 @@ class Utils {
         console.log('signed in!');
       }
     }
+    async swipeScreen(direction) 
+     {
+        var screenSize = await driver.getWindowRect();
+        
+        const height = screenSize['height'];
+        const width = screenSize['width'];
+        console.log('Screen size ' + width + 'x' + height);
+        var startX,startY,endX,endY
+        switch (direction.toUpperCase()) 
+        {
+          case "UP":
+            startX = width * 0.5;
+            startY = height * 0.8;
+            endX = startX;
+            endY = height * 0.1;
+            break;
+          case "DOWN":
+            startX = width * 0.5;
+            startY = height * 0.3;
+            endX = startX;
+            endY = height * 0.8
+            break;
+          case "RIGHT":
+            startX = width * 0.05;
+            startY = height * 0.5;
+            endX = width * 0.7;
+            endY = startY;
+            break;
+          case "LEFT":
+            startX = width * 0.95;
+            startY = height * 0.5;
+            endX = width * 0.6;
+            endY = startY;
+            break; 
+        }
+        console.log( startX + ' ' + startY + '  ' + endX + '  ' +endY);
+        await driver.performActions([
+          {
+            type: 'pointer',
+            id: 'finger1',
+            parameters: {pointerType: 'touch'},
+            actions: [
+              {type: 'pointerMove', duration: 0, x: startX, y: startY },
+              {type: 'pointerDown', button: 0},
+              {type: 'pause', duration: 100},
+              {type: 'pointerMove', duration: 1000, x: endX, y: endY },
+              {type: 'pointerUp', button: 0},
+
+            ],
+          },
+        ]);
+     }
+     async swipeUntilElementIsVisible(elementLocator) {
+      var currentSwipes = 0;
+      while(! await (elementLocator).isExisting() && currentSwipes < 5){
+        console.log(`Element not visible, swiping down`);
+        await this.swipeScreen("DOWN");
+        currentSwipes++;
+      }
+      currentSwipes = 0;
+      while(! await (elementLocator).isExisting() && currentSwipes < 5){
+        console.log(`Element not visible, swiping UP`);
+        await this.swipeScreen("UP");
+        currentSwipes++;
+      }
+    }
   }
   
   module.exports = new Utils();
