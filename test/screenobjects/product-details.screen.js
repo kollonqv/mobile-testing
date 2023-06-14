@@ -27,19 +27,19 @@ class ProductDetailsScreen {
   async verifyProductDetailsScreen()
     {
       // verifying product image displays
-        utils.swipeUntilElementIsVisible(this.productImage);
+        utils.swipeUntilElementIsVisible(this.productImage,"DOWN");
         await expect(this.productImage).toBeDisplayed();
         console.log('Product image display');
         // Verifying product name displays
-        utils.swipeUntilElementIsVisible(this.productName);
+        utils.swipeUntilElementIsVisible(this.productName,"DOWN");
         await expect(this.productName).toBeDisplayed();
         console.log('Product Name display');
         // verifying product details displays
-        utils.swipeUntilElementIsVisible(this.productDetails);
+        utils.swipeUntilElementIsVisible(this.productDetails,"DOWN");
         await expect(this.productDetails).toBeDisplayed();
         console.log('Product Details display');
         // Verifying product price displays
-        utils.swipeUntilElementIsVisible(this.productPrice);
+        utils.swipeUntilElementIsVisible(this.productPrice,"DOWN");
         await expect(this.productPrice).toBeDisplayed();
         console.log('Product Price display');
         

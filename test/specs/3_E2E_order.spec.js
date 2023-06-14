@@ -19,7 +19,7 @@ describe('3_E2E_order', () => {
     // 3. Open the T-Shirt item page
     await ProductListScreen.testAllTheThings.click();
     // 4. Add the T-Shirt to the cart
-    await Utils.swipeDownUntilElementIsVisible(ProductDetailsScreen.addToCard);
+    await Utils.swipeUntilElementIsVisible(ProductDetailsScreen.addToCard,"UP");
     await ProductDetailsScreen.addToCard.click();
     // 5. Open Cart
     await ProductDetailsScreen.openCart.click();
@@ -42,10 +42,10 @@ describe('3_E2E_order', () => {
     
 
     // 12. Click Continue
-    await Utils.swipeUntilElementIsVisible(Checkout_InfoScreen.continueButton);
+    await Utils.swipeUntilElementIsVisible(Checkout_InfoScreen.continueButton,"UP");
     await Checkout_InfoScreen.continueButton.click();
     // 13. Click Finish
-    await Utils.swipeUntilElementIsVisible(Checkout_overviewScreen.finishButton);
+    await Utils.swipeUntilElementIsVisible(Checkout_overviewScreen.finishButton,"UP");
     await Checkout_overviewScreen.finishButton.click();
     // 14. Verify that the THANK YOU FOR YOU ORDER message is displayed
     await expect(Checkout_CompleteScreen.orderCompleteMessage).toBeDisplayed();

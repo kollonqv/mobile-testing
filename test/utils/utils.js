@@ -109,19 +109,14 @@ class Utils {
           },
         ]);
      }
-     async swipeUntilElementIsVisible(elementLocator) {
+     async swipeUntilElementIsVisible(elementLocator,swipeDirection) {
       var currentSwipes = 0;
       while(! await (elementLocator).isExisting() && currentSwipes < 5){
-        console.log(`Element not visible, swiping down`);
-        await this.swipeScreen("DOWN");
+        console.log('Element not visible, swiping ' + swipeDirection);
+        await this.swipeScreen(swipeDirection);
         currentSwipes++;
       }
-      currentSwipes = 0;
-      while(! await (elementLocator).isExisting() && currentSwipes < 5){
-        console.log(`Element not visible, swiping UP`);
-        await this.swipeScreen("UP");
-        currentSwipes++;
-      }
+     
     }
   }
   
