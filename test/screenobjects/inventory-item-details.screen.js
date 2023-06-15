@@ -2,6 +2,9 @@ class InventoryItemScreen {
     get inventoryItem() {
         return $('//*[@content-desc="test-Inventory item page"]');
     }
+    get backToProductScreenBtn() {
+        return $('//*[@content-desc="test-BACK TO PRODUCTS"]');
+    }
     get addToCart() {
         return $('//*[@content-desc="test-ADD TO CART"]');
     }
@@ -12,7 +15,7 @@ class InventoryItemScreen {
         return $('//*[@content-desc="test-Cart"]');
     }
     get itemDescription(){
-        return $('//*[@content-desc="test-Description"]/android.widget.TextView[1]')
+        return $('//*[@text="Test.allTheThings() T-Shirt (Red)"]');
     }
 }
 
