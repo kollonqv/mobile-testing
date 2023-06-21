@@ -3,7 +3,7 @@ const ProductListScreen = require("../screenobjects/product-list.screen");
 const SidePanelScreen = require("../screenobjects/side-panel.screen");
 const Utils = require('../utils/utils');
 
-describe('Hackathon Scenario_1', () => {
+describe('1_LOGIN_valid_user', () => {
 
   it('1_LOGIN_valid_user', async () => {
     // 1. Insert 'standard_user' to the Username field
