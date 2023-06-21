@@ -22,7 +22,7 @@ config.capabilities = [
     "platformName" : "ios",
     "appium:platformVersion" : process.env.npm_config_osversion || "16.0",
     "appium:deviceName" : process.env.npm_config_device || "iPhone 14",
-    "appium:app" : "bs://59821aec5c61ea1f33282a9bf2ee2c5770ee51d3",
+    "appium:app" : "", // Put the BS url here which you get after uploading the app to BrowserStack
   }
 ]
 

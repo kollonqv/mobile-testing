@@ -13,6 +13,8 @@ config.specs = [
   path.join(process.cwd(), './test/specs/**/*.js')
 ];
 
+config.maxInstances = 5;
+
 //
 // ============
 // Capabilities
@@ -25,7 +27,7 @@ config.capabilities = [
     "platformName" : "android",
     "appium:platformVersion" : process.env.npm_config_osversion || "12.0",
     "appium:deviceName" : process.env.npm_config_device || "Samsung Galaxy S22 Ultra",
-    "appium:app" : "bs://9d6072c53c0af842cee2d72c0c22284e75af7cc9",
+    "appium:app" : "", // Put the BS url here which you get after uploading the app to BrowserStack
   },
   //android config
   {
@@ -34,7 +36,7 @@ config.capabilities = [
     "platformName" : "ios",
     "appium:platformVersion" : process.env.npm_config_osversion || "16.0",
     "appium:deviceName" : process.env.npm_config_device || "iPhone 14",
-    "appium:app" : "bs://59821aec5c61ea1f33282a9bf2ee2c5770ee51d3",
+    "appium:app" : "", // Put the BS url here which you get after uploading the app to BrowserStack
   }
 ]
 
